@@ -1,0 +1,265 @@
+:root {
+  --text-color: #333;
+  --title-color: #007bff;
+  --font-size-title: 1.5rem;
+  --font-size-text: 1rem;
+  --button-bg-color: #007bff;
+  --nav-background: #ffffff;
+  --button-text-color: #fff;
+  --footer-background: #333;
+  --footer-text-color: #fff;
+  --footer-link-color: #007bff;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--nav-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: var(--title-color);
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-toggle {
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--nav-background);
+}
+
+.nav-list.active {
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: var(--button-bg-color);
+  border-radius: 5px;
+}
+
+.flex-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 20px;
+  text-align: left;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  color: var(--title-color);
+  font-size: var(--font-size-title);
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: var(--text-color);
+  font-size: var(--font-size-text);
+  margin-bottom: 20px;
+}
+
+.card-button {
+  padding: 10px 20px;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--font-size-text);
+}
+
+.card-button:hover {
+  background-color: darken(var(--button-bg-color), 10%);
+}
+
+.footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* width: 100%; */
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: var(--footer-link-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-text-color);
+}
+
+/* Media queries for tablets and larger screens */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-list li {
+    margin-left: 20px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .flex-container {
+    flex-direction: row;
+    max-width: 1200px;
+  }
+
+  .card-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .image-container {
+    justify-content: flex-end;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
